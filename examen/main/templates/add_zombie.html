@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>operations</title>
+
+</head>
+<body>
+
+    <h2>Welcome</h2>
+	<form method="POST" align="left" >
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit"/>
+	</form>
+	
+</body>
+
+</html>

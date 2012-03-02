@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Examen 2, Progra web </title>
+</head>
+<body>
+	<div>
+		Zombie
+	{% for zombie in zombies %}
+	<div>
+		<h3>{{ zombie.name }} - ({{ zombie.tweets.count }}) tweets</h3>
+		<a href="{% url show_zombie zombie.pk %}">See more</a>
+		<div><h4>Cemetery - {{ zombie.graveyard }}</h4></div>
+		<div class='tweets'>
+			{% for tweet in zombie.tweets.all %}
+			<div>Tweet: {{ tweet.status }}</div>
+			{% endfor %}
+		</div>
+	</div>
+	{% endfor %}
+</body>
+
+</html>
